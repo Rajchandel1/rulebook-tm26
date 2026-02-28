@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, BookOpen, Trophy, Cpu, Users, List, Info, ShieldCheck, Layers, Users2 } from 'lucide-react';
 import HTMLFlipBook from 'react-pageflip';
 import { GAMES, Game } from './constants';
+import buddhaLogo from './buddha.png';
 
 // Types for the flipbook ref
 interface IFlipBook {
@@ -123,7 +124,7 @@ export default function App() {
                   <div className="w-40 h-40 md:w-56 md:h-56 mx-auto relative group">
                     <div className="absolute inset-0 bg-accent/20 rounded-full blur-2xl group-hover:bg-accent/40 transition-all duration-500" />
                     <img 
-                      src="./src/buddha.png" 
+                      src={buddhaLogo}
                       alt="Technomantra Logo" 
                       className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_20px_rgba(140,96,246,0.5)]"
                       referrerPolicy="no-referrer"
