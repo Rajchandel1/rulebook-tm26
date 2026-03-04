@@ -66,7 +66,7 @@ export default function App() {
       </div>
 
       {/* Book Container */}
-      <div className="relative w-full max-w-5xl flex items-center justify-center mt-28 mb-36 md:mt-11 md:mb-10">
+      <div className="relative w-full max-w-5xl flex items-center justify-center mt-20 mb-24 md:mt-12 md:mb-12">
         {/* Desktop Left Arrow */}
         <button
           onClick={() => bookRef.current?.pageFlip?.().flipPrev()}
@@ -112,7 +112,7 @@ export default function App() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent/20 blur-[100px] rounded-full pointer-events-none" />
               
               <div className="absolute inset-4 border border-white/10 pointer-events-none" />
-
+              
               <div className="z-10 space-y-8">
                 <motion.div 
                   initial={{ scale: 0.8, opacity: 0 }}
@@ -120,12 +120,11 @@ export default function App() {
                   transition={{ duration: 0.8, ease: "easeOut" }}
                   className="relative inline-block"
                 >
-                  {/* Logo Placeholder - User should replace src with their logo path */}
                   <div className="w-40 h-40 md:w-56 md:h-56 mx-auto relative group">
                     <div className="absolute inset-0 bg-accent/20 rounded-full blur-2xl group-hover:bg-accent/40 transition-all duration-500" />
                     <img 
                       src={buddhaLogo}
-                      alt="Technomantra Logo" 
+                      alt="Buddha Logo" 
                       className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_20px_rgba(140,96,246,0.5)]"
                       referrerPolicy="no-referrer"
                     />
@@ -200,6 +199,12 @@ export default function App() {
                         <span className="text-[11px] font-bold uppercase tracking-wider">{game.teamSize}</span>
                       </div>
                     )}
+                    {game.fee && (
+                      <div className="mt-1 flex items-center gap-1.5 text-accent">
+                        <Trophy className="w-3.5 h-3.5" />
+                        <span className="text-[11px] font-black uppercase tracking-wider">Fee: {game.fee}</span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Content Sections */}
@@ -264,8 +269,12 @@ export default function App() {
             {/* Back Cover */}
             <div className="page bg-[#0f172a] text-white p-8 flex flex-col items-center justify-center text-center shadow-inner">
               <div className="space-y-6">
-                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto">
-                  <BookOpen className="w-8 h-8 text-white/40" />
+                <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto p-2">
+                  <img
+                    src={buddhaLogo}
+                    alt="Buddha Logo"
+                    className="w-full h-full object-contain opacity-90"
+                  />
                 </div>
                 <h3 className="text-2xl font-display font-black uppercase tracking-tighter">End of Section</h3>
                 <p className="opacity-50 text-xs uppercase tracking-widest">Technomantra 2026</p>
