@@ -104,7 +104,7 @@ export default function App() {
             useMouseEvents={true}
             swipeDistance={20}
             showPageCorners={true}
-            disableFlipByClick={false}
+            disableFlipByClick={true}
           >
             {/* Cover Page */}
             <div className="page bg-black text-white p-6 md:p-10 flex flex-col items-center justify-center text-center shadow-inner relative overflow-hidden">
