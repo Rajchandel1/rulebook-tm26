@@ -90,11 +90,11 @@ export const GAMES: Game[] = [
     about: 'UIVERSE: The Frontend Challenge is a solo coding competition designed to test participants’ frontend development skills and creativity. In this event, participants create and replicate web designs using HTML, CSS, and JavaScript. The challenge focuses on how well developers can design modern user interfaces and write clean frontend code within a limited time.',
     rules: [
       'The event is solo, meaning each participant competes individually.',
-      'Participants can use any code editor (like VS Code or Sublime) and web browsers.',
+      'Participants can use any code editor (like VS Code) and web browsers.',
       'Design tools such as Figma, Canva, or Photoshop are not allowed. All designs must be created using code only.',
-      'Internet access is allowed for documentation or syntax reference.',
       'In Round 1, AI tools can be used to assist in coding, but participants must understand and refine the generated code themselves.',
-      'In Round 2, AI tools are strictly prohibited.'
+      'In Round 2, AI tools are strictly prohibited.',
+      'Internet access is allowed for first round only',
     ],
     rounds: [
       { title: 'Round 1 – AI Co-Pilot (Creative Coding)', content: 'Participants must choose an existing brand and design a modern landing page concept for it using HTML and CSS. They can use AI tools as assistants to generate or improve code, but the final design should be customized and refined by the participant. Time Limit: 30 minutes.' },
@@ -111,7 +111,8 @@ export const GAMES: Game[] = [
       'Participants must bring all materials required for rangoli creation.',
       'Rangoli designs must be original and created on the spot during the competition.',
       'Any violation of rules may lead to disqualification.',
-      'The judges’ decision will be final.'
+      'The judges’ decision will be final.',
+      'The rangoli must be created within the designated area (2 X 2 Feet) and time limit (2 hours).',
     ],
     fee: '₹40 only per person'
   },
@@ -124,7 +125,8 @@ export const GAMES: Game[] = [
       'Participation will be individual Only.',
       'All entries must be original and created solely by the participant.',
       'Posters may be hand-made or digitally designed using tools like Canva.',
-      'AI-generated posters, images, designs, or content are strictly prohibited.',
+      'Participants Can Use 60% AI Assistance for Digital Posters, but the final design must be customized and refined by the participant.',
+      'Size requirement: Atleast A2 size (16.5 x 23.4 inches).',
       'All posters must be submitted before the specified deadline.',
       'The poster must maintain a professional appearance and be technically relevant to the given theme.',
       'A panel of judges will evaluate the posters based on the announced judging criteria.',
@@ -179,7 +181,7 @@ export const GAMES: Game[] = [
     id: 'sql-slayer',
     title: 'SQL Slayer',
     category: 'Tech',
-    about: 'SQL Slayer is a thrilling, story-driven SQL battle where participants enter a fictional database warzone. Players solve narrative-based SQL challenges to earn points and prepare for the ultimate showdown. The competition unfolds in two intense rounds — beginning in the College Arena and culminating in the Senate Hall, where participants engage in a rapid-fire SQL battle against the Main Villain. Strategy, accuracy, and speed determine the ultimate SQL Slayer.',
+    about: 'SQL Slayer is a thrilling, story-driven SQL battle where participants enter a fictional database warzone. Players solve narrative-based SQL challenges to earn points and prepare for the ultimate showdown. The competition unfolds in intense round — beginning in the College Arena. Participants will face a series of story-based database scenarios, where they must write SQL queries to solve problems and earn points. The participant with the highest score at the end of the round will be declared the winner. The game tests participants’ SQL skills, problem-solving ability, and strategic thinking under pressure.',
     rules: [
       'Participants must write valid and syntactically correct SQL queries.',
       'No electronic devices or external assistance is allowed.',
@@ -188,8 +190,7 @@ export const GAMES: Game[] = [
       'The judges’ decision will be final.'
     ],
     rounds: [
-      { title: 'Round 1 – The Awakening (College Arena)', content: 'Duration: 45 Minutes. Participants will be given a story-based database scenario. They must write SQL queries based on the storyline. Points will be awarded for correctness and accuracy. The total points earned in this round will carry forward to Round 2. Selected participants will advance to the Senate Hall.' },
-      { title: 'Round 2 – The Senate War (Rapid Fire)', content: 'This round will consist of SQL-related MCQs. Each question will have a strict time limit. Faster correct responses will result in greater impact during the battle. Participants will use their earned points strategically in the final confrontation' }
+      { title: 'Round 1 – The Awakening (College Arena)', content: 'Duration: 45 Minutes. Participants will be given a story-based database scenario.' }
     ],
     fee: '₹40 only'
   },
