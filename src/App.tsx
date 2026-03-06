@@ -80,7 +80,6 @@ export default function App() {
         <button
           onClick={goPrev}
           className="hidden md:flex absolute -left-20 z-10 p-5 bg-paper rounded-full shadow-xl hover:bg-accent hover:text-white transition-all disabled:opacity-20 border border-ink/5"
-
         >
           <ChevronLeft className="w-8 h-8" />
         </button>
@@ -98,7 +97,8 @@ export default function App() {
             maxHeight={750}
             maxShadowOpacity={0.6}
             showCover={true}
-            mobileScrollSupport={true}
+            // CHANGED: Set mobileScrollSupport to false to prevent scroll from flipping
+            mobileScrollSupport={false}
             onFlip={onPage}
             className="technomantra-book"
             style={{ backgroundColor: 'transparent' }}
@@ -109,8 +109,10 @@ export default function App() {
             usePortrait={window.innerWidth < 768}
             startZIndex={0}
             autoSize={true}
-            clickEventForward={true}
-            useMouseEvents={true}
+            // CHANGED: Set clickEventForward to false to prevent clicking page from flipping
+            clickEventForward={false}
+            // CHANGED: Set useMouseEvents to false to prevent dragging/swiping to flip
+            useMouseEvents={false}
             swipeDistance={20}
             showPageCorners={true}
             disableFlipByClick={false}
@@ -313,7 +315,6 @@ export default function App() {
         <button
           onClick={goPrev}
           className="flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg active:scale-95 transition-all disabled:opacity-30 disabled:bg-ink/10 disabled:text-ink/40"
-
         >
           <ChevronLeft className="w-4 h-4" /> Prev
         </button>
