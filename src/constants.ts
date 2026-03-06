@@ -97,7 +97,7 @@ export const GAMES: Game[] = [
       'Internet access is allowed for first round only',
     ],
     rounds: [
-      { title: 'Round 1 – AI Co-Pilot (Creative Coding)', content: 'Participants must choose an existing brand and design a modern landing page concept for it using HTML and CSS. They can use AI tools as assistants to generate or improve code, but the final design should be customized and refined by the participant. Time Limit: 30 minutes.' },
+      { title: 'Round 1 – AI Companion (Creative Coding)', content: 'Participants must choose an existing brand and design a modern landing page concept for it using HTML and CSS. They can use AI tools as assistants to generate or improve code, but the final design should be customized and refined by the participant. Time Limit: 30 minutes.' },
       { title: 'Round 2 – Pixel Perfect Clone (Skill Test)', content: 'Participants are given a screenshot of a webpage and must recreate it as accurately as possible using HTML and CSS. This round tests attention to detail, coding accuracy, and frontend fundamentals. AI tools are not allowed in this round. Time Limit: 45 minutes.' }
     ],
     fee: '₹40 only'
