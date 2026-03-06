@@ -34,6 +34,15 @@ export default function App() {
     setCurrentPage(0);
   };
 
+  const goPrev = useCallback(() => {
+    const pageFlip = bookRef.current?.pageFlip?.();
+    if (!pageFlip) return;
+    const currentIndex = pageFlip.getCurrentPageIndex();
+    if (currentIndex > 0) {
+      pageFlip.flip(currentIndex - 1);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#020617] flex flex-col items-center justify-center p-2 md:p-8 overflow-hidden font-serif">
       {/* Top Navigation / Tabs */}
@@ -69,9 +78,9 @@ export default function App() {
       <div className="relative w-full max-w-5xl flex items-center justify-center mt-20 mb-24 md:mt-12 md:mb-12">
         {/* Desktop Left Arrow */}
         <button
-          onClick={() => bookRef.current?.pageFlip?.().flipPrev()}
+          onClick={goPrev}
           className="hidden md:flex absolute -left-20 z-10 p-5 bg-paper rounded-full shadow-xl hover:bg-accent hover:text-white transition-all disabled:opacity-20 border border-ink/5"
-          disabled={currentPage === 0}
+
         >
           <ChevronLeft className="w-8 h-8" />
         </button>
@@ -104,7 +113,7 @@ export default function App() {
             useMouseEvents={true}
             swipeDistance={20}
             showPageCorners={true}
-            disableFlipByClick={true}
+            disableFlipByClick={false}
           >
             {/* Cover Page */}
             <div className="page bg-black text-white p-6 md:p-10 flex flex-col items-center justify-center text-center shadow-inner relative overflow-hidden">
@@ -166,6 +175,7 @@ export default function App() {
                       <div className="w-8 text-right font-mono text-xs font-bold opacity-40 text-ink">{idx + 3}</div>
                     </li>
                   ))}
+
                 </ul>
                 <div className="mt-6 pt-4 border-t border-ink/5 text-center">
                   <p className="text-[10px] uppercase tracking-widest font-black text-ink/30">Technomantra 2026</p>
@@ -301,9 +311,9 @@ export default function App() {
       {/* Mobile Navigation Bar - Fixed at bottom */}
       <div className="md:hidden fixed bottom-0 left-0 w-full bg-paper/95 backdrop-blur-lg border-t border-ink/10 px-6 py-4 flex justify-between items-center z-[100] shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
         <button
-          onClick={() => bookRef.current?.pageFlip?.().flipPrev()}
+          onClick={goPrev}
           className="flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg active:scale-95 transition-all disabled:opacity-30 disabled:bg-ink/10 disabled:text-ink/40"
-          disabled={currentPage === 0}
+
         >
           <ChevronLeft className="w-4 h-4" /> Prev
         </button>
