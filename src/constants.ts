@@ -105,7 +105,7 @@ export const GAMES: Game[] = [
   {
     id: 'rang-e-tech',
     title: 'Rang-e-Tech',
-    category: 'Tech',
+    category: 'Non-Tech',
     about: 'Rang-e-Tech is a Technical Rangoli Competition where participants creatively blend traditional rangoli art with modern technological themes. Designs must reflect a specified technical concept.',
     rules: [
       'Participants must bring all materials required for rangoli creation.',
@@ -368,7 +368,7 @@ export const GAMES: Game[] = [
   {
     id: 'it-ramp-walk',
     title: 'IT Ramp Walk',
-    category: 'Non-Tech',
+    category: 'Tech',
     about: 'Welcome to the IT Ramp Walk, where technology meets confidence and creativity. Participants will showcase IT-inspired outfits and presentations based on tech themes, trends, or innovations. The ramp walk tests your confidence, communication skills, creativity, and tech awareness—all in a stylish way.',
     rules: [
       'Each participant must prepare an IT/tech-based theme (e.g., AI, Cyber Security, Future Tech, Startups, Coding Culture, etc.).',
