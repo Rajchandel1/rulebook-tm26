@@ -34,6 +34,8 @@ export default function App() {
     setCurrentPage(0);
   };
 
+  const getDisplayFee = (game: Game) => game.category === 'Tech' ? '40 Rs' : '50 Rs';
+
   const goPrev = useCallback(() => {
     const pageFlip = bookRef.current?.pageFlip?.();
     if (!pageFlip) return;
@@ -211,12 +213,15 @@ export default function App() {
                         <span className="text-[11px] font-bold uppercase tracking-wider">{game.teamSize}</span>
                       </div>
                     )}
-                    {game.fee && (
-                      <div className="mt-1 flex items-center gap-1.5 text-accent">
-                        <Trophy className="w-3.5 h-3.5" />
-                        <span className="text-[11px] font-black uppercase tracking-wider">Fee: {game.fee}</span>
+                    <div className="mt-4 rounded-2xl border-2 border-accent/30 bg-white px-4 py-3 shadow-[0_12px_30px_rgba(15,23,42,0.12)]">
+                      <div className="flex items-center gap-2 text-accent">
+                        <Trophy className="w-5 h-5" />
+                        <span className="text-[11px] font-black uppercase tracking-[0.25em]">Entry Fee</span>
                       </div>
-                    )}
+                      <div className="mt-1 text-2xl md:text-3xl font-black uppercase tracking-tight text-accent">
+                        {getDisplayFee(game)}
+                      </div>
+                    </div>
                   </div>
 
                   {/* Content Sections */}
@@ -227,7 +232,7 @@ export default function App() {
                         <Info className="w-4 h-4 text-accent" />
                         <h3 className="text-xs font-black uppercase tracking-widest text-ink/60">About</h3>
                       </div>
-                      <p className="text-sm md:text-base leading-relaxed text-ink font-serif font-bold italic">
+                      <p className="text-lg md:text-base leading-relaxed text-ink font-serif font-bold italic">
                         {game.about}
                       </p>
                     </section>
@@ -242,8 +247,8 @@ export default function App() {
                         <div className="space-y-4">
                           {game.rounds.map((round, rIdx) => (
                             <div key={rIdx} className="bg-accent/5 p-4 rounded-xl border-l-4 border-accent shadow-sm">
-                              <h4 className="text-sm font-black text-ink mb-1 uppercase tracking-tight">{round.title}</h4>
-                              <p className="text-xs md:text-sm text-ink font-bold leading-relaxed italic">{round.content}</p>
+                              <h4 className="text-lg font-black text-ink mb-1 uppercase tracking-tight">{round.title}</h4>
+                              <p className="text-lg md:text-lg text-ink font-bold leading-relaxed italic">{round.content}</p>
                             </div>
                           ))}
                         </div>
@@ -255,11 +260,11 @@ export default function App() {
                       <section>
                         <div className="flex items-center gap-2 mb-3">
                           <ShieldCheck className="w-4 h-4 text-accent" />
-                          <h3 className="text-xs font-black uppercase tracking-widest text-ink/60">Rules & Regulations</h3>
+                          <h3 className="text-lg font-black uppercase tracking-widest text-ink/60">Rules & Regulations</h3>
                         </div>
                         <ul className="space-y-3">
                           {game.rules.map((rule, ruleIdx) => (
-                            <li key={ruleIdx} className="flex gap-3 text-sm text-ink font-bold italic leading-snug">
+                            <li key={ruleIdx} className="flex gap-3 text-lg text-ink font-bold italic leading-snug">
                               <span className="text-accent font-black shrink-0">•</span>
                               <span>{rule}</span>
                             </li>
