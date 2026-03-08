@@ -248,7 +248,8 @@ export default function App() {
                           {game.rounds.map((round, rIdx) => (
                             <div key={rIdx} className="bg-accent/5 p-4 rounded-xl border-l-4 border-accent shadow-sm">
                               <h4 className="text-lg font-black text-ink mb-1 uppercase tracking-tight">{round.title}</h4>
-                              <p className="text-lg md:text-lg text-ink font-bold leading-relaxed italic">{round.content}</p>
+                              <p className="text-lg
+                               md:text-lg text-ink font-bold leading-relaxed italic">{round.content}</p>
                             </div>
                           ))}
                         </div>

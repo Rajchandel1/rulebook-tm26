@@ -41,8 +41,8 @@ export const GAMES: Game[] = [
       'The decision of the judges will be final and binding'
     ],
     rounds: [
-      { title: 'Round 1 – Preliminary Round (College Level)', content: 'Participants will present their IT-based business idea. Each presentation will have a duration of 10–15 minutes. Judges will evaluate ideas based on innovation, feasibility, technical depth, and presentation quality. This round will serve as the elimination round. Selected participants or teams will advance to Round 2 in the Senate Hall.' },
-      { title: 'Round 2 – Final Round (Senate Hall)', content: 'Finalists will present their refined or expanded business ideas. Each presentation will have a duration of 10–15 minutes. A detailed Q&A session will follow each presentation. Final evaluation will determine the winner based on overall performance, innovation, and impact potential' }
+      { title: 'Round 1 – Preliminary Round (College Level)', content: 'Participants will present their IT-based business idea. Each presentation will have a duration of 10–15 minutes. Judges will evaluate ideas based on innovation, feasibility, technical depth, and presentation quality. This round will serve as the elimination round. Selected participants or teams will advance to Round 2 in the Zoology Hall.' },
+      { title: 'Round 2 – Final Round (Zoology Hall)', content: 'Finalists will present their refined or expanded business ideas. Each presentation will have a duration of 10–15 minutes. A detailed Q&A session will follow each presentation. Final evaluation will determine the winner based on overall performance, innovation, and impact potential' }
     ],
     fee: '₹40 per person'
   },
@@ -208,7 +208,7 @@ export const GAMES: Game[] = [
     ],
     rounds: [
       { title: 'Round 1 ( KS Auditorium )', content: 'Participants will perform the standard Pictionary task. One member will draw, and the other must guess the word within 1 minutes.' },
-      { title: 'Round 2 ( Senate Hall )', content: 'Participants will perform the standard Pictionary task. One member will draw, and the other must guess the word within 1 minutes.' }
+      { title: 'Round 2 ( Zoology Hall )', content: 'Participants will perform the standard Pictionary task. One member will draw, and the other must guess the word within 1 minutes.' }
     ],
     fee: '₹50 only'
   },
@@ -266,7 +266,7 @@ export const GAMES: Game[] = [
     ],
     rounds: [
       { title: 'Round 1', content: 'Teams attempt to guess as many words or sentences as possible within 1 minute using lip-reading. The top performing teams qualify for Round 2.' },
-      { title: 'Round 2', content: 'The same format continues but with more challenging words or sentences. This round will be conducted in the Senate Hall, and the best performing team will be declared the winner.' }
+      { title: 'Round 2', content: 'The same format continues but with more challenging words or sentences. This round will be conducted in the Zoology Hall, and the best performing team will be declared the winner.' }
     ],
     fee: 'Rs 50 per person'
   },
