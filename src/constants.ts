@@ -340,8 +340,8 @@ export const GAMES: Game[] = [
       'The team winning 4 rounds first will be declared the Game Winner.'
     ],
     rounds: [
-      { title: 'Round 1 – Battle Royale (Qualifying Round)', content: 'Map: Bermuda. Mode: Battle Royale (Squad). Each custom room will consist of 12 teams. The winning team from each room will qualify for the final round' },
-      { title: 'Round 2 – Clash Squad (Final Round)', content: 'Mode: Clash Squad. Teams: 2. Best of 7 rounds. The team that wins 4 rounds first will be declared the winner' }
+      { title: 'Round 1 – Battle Royale', content: 'Based on ESPORTS point system and rules.' },
+      { title: 'Round 2 – CS (Clash Squad)', content: 'Rules: Character skill - Yes. Gun attributes - No. Loadout - Yes.' }
     ],
     fee: '₹250'
   },
